@@ -11,5 +11,10 @@ namespace Prog_4_test_
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
