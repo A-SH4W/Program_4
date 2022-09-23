@@ -99,14 +99,13 @@
             this.groupBox1.MinimumSize = new System.Drawing.Size(165, 146);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.groupBox1.Size = new System.Drawing.Size(191, 146);
+            this.groupBox1.Size = new System.Drawing.Size(165, 146);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
             // mapGrid
             // 
-            this.mapGrid.AutoSize = true;
             this.mapGrid.ColumnCount = 2;
             this.mapGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.mapGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -115,7 +114,7 @@
             this.mapGrid.RowCount = 2;
             this.mapGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.mapGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mapGrid.Size = new System.Drawing.Size(183, 101);
+            this.mapGrid.Size = new System.Drawing.Size(157, 106);
             this.mapGrid.TabIndex = 0;
             // 
             // GameScreen
@@ -134,7 +133,6 @@
             this.Name = "GameScreen";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
