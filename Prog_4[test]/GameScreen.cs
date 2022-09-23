@@ -1,24 +1,30 @@
+using System.Diagnostics;
+
 namespace Prog_4_test_
 {
     public partial class GameScreen : Form
     {
-        public int r { get; set; }
-        public int c { get; set; }
+        //public int r { get; set; }
+        //public int c { get; set; }
+
 
         public GameScreen()
         {
             InitializeComponent();
-            mapGrid.RowCount = r;
-            mapGrid.ColumnCount = c;
+            mapGrid.RowCount = StartScreen.r;
+            mapGrid.ColumnCount = StartScreen.c;
             mapGrid.AutoSize = true;
+            Debug.Write("->");
+            Debug.Write(mapGrid.RowCount);
 
             for (int i = 0; i < mapGrid.RowCount; i++)
             {
                 for (int j = 0; j < mapGrid.ColumnCount; j++)
                 {
                    Label testLabel = new Label();
-                   this.Controls.Add(testLabel);
-                   testLabel.Text = "~"; 
+                   testLabel.Text = "~";
+                   mapGrid.Controls.Add(testLabel,i,j);
+                    
                 }
             }
 

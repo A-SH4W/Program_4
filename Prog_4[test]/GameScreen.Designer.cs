@@ -32,7 +32,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mapGrid = new System.Windows.Forms.TableLayoutPanel();
@@ -78,16 +77,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(226, 16);
-            this.label1.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 323);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Map";
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.DarkKhaki;
@@ -103,6 +92,7 @@
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
             this.groupBox1.Controls.Add(this.mapGrid);
             this.groupBox1.Location = new System.Drawing.Point(229, 19);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
@@ -116,6 +106,7 @@
             // 
             // mapGrid
             // 
+            this.mapGrid.AutoSize = true;
             this.mapGrid.ColumnCount = 2;
             this.mapGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.mapGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -131,11 +122,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(483, 359);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -143,6 +134,7 @@
             this.Name = "GameScreen";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +146,6 @@
         private Button button2;
         private TextBox textBox1;
         private Button button3;
-        private Label label1;
         private Label label2;
         private GroupBox groupBox1;
         private TableLayoutPanel mapGrid;

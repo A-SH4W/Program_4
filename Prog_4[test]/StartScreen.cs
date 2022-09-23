@@ -18,22 +18,26 @@ namespace Prog_4_test_
             InitializeComponent();
         }
 
+        public static int r = 0;
+        public static int c = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("mogus");
-            GameScreen gameScreen = new GameScreen();
-            gameScreen.Show();
             string userInput = textBox1.Text;
             List<int> nums = userInput.Split(',').Select(int.Parse).ToList();
-            int r = nums[0];
-            int c = nums[1];
-            Console.WriteLine(r);
-            Console.WriteLine(c);
+            r = nums[0];
+            c = nums[1];
+
+            //Debug.Write(r);
+            //Debug.Write(c);
 
 
 
             // Hides start screen
             this.Hide();
+
+            GameScreen gameScreen = new GameScreen();
+            gameScreen.Show();
         }
     }
 }
