@@ -36,8 +36,7 @@ namespace Prog_4_test_
             Debug.Write(islandRow);
             Debug.Write(",");
             Debug.Write(islandCol);
-
-
+            Debug.Write("\n");
         }
 
         
@@ -50,6 +49,17 @@ namespace Prog_4_test_
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void guessButton_Click(object sender, EventArgs e)
+        {
+            string userGuess = guessBox.Text;
+            List<int> guess = userGuess.Split(',').Select(int.Parse).ToList();
+            int rowGuess = guess[0];
+            int colGuess = guess[1];
+            Debug.Write("User Guess -> ");
+            Debug.Write(userGuess);
+            Debug.Write("\n");
         }
     }
 }

@@ -22,7 +22,6 @@ namespace Prog_4_test_
         public static int c = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("mogus");
             string userInput = textBox1.Text;
             List<int> nums = userInput.Split(',').Select(int.Parse).ToList();
             r = nums[0];
@@ -34,7 +33,7 @@ namespace Prog_4_test_
 
 
             // Hides start screen
-            this.Hide();
+            // this.Hide();
 
             GameScreen gameScreen = new GameScreen();
             gameScreen.Show();
