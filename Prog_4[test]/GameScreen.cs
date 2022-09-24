@@ -6,7 +6,7 @@ namespace Prog_4_test_
     {
         //public int r { get; set; }
         //public int c { get; set; }
-
+        public int guessCounter = 0; 
 
         public GameScreen()
         {
@@ -53,13 +53,15 @@ namespace Prog_4_test_
 
         private void guessButton_Click(object sender, EventArgs e)
         {
-            string userGuess = guessBox.Text;
+            string userGuess = guessBox.Text; 
             List<int> guess = userGuess.Split(',').Select(int.Parse).ToList();
             int rowGuess = guess[0];
             int colGuess = guess[1];
             Debug.Write("User Guess -> ");
             Debug.Write(userGuess);
             Debug.Write("\n");
+            guessCounter++;
+            numGuessBox.Text = guessCounter.ToString();
         }
     }
 }

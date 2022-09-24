@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mapGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.numGuessBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,6 +120,23 @@
             this.mapGrid.Size = new System.Drawing.Size(157, 106);
             this.mapGrid.TabIndex = 0;
             // 
+            // numGuessBox
+            // 
+            this.numGuessBox.Location = new System.Drawing.Point(233, 259);
+            this.numGuessBox.Name = "numGuessBox";
+            this.numGuessBox.ReadOnly = true;
+            this.numGuessBox.Size = new System.Drawing.Size(69, 23);
+            this.numGuessBox.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(229, 241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "# of Guesses";
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -125,6 +144,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(483, 359);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numGuessBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
@@ -148,5 +169,7 @@
         private Label label2;
         private GroupBox groupBox1;
         private TableLayoutPanel mapGrid;
+        private TextBox numGuessBox;
+        private Label label1;
     }
 }
