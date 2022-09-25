@@ -18,8 +18,11 @@ namespace Prog_4_test_
             InitializeComponent();
         }
 
+        // static variables that define the size of the map
         public static int r = 0;
         public static int c = 0;
+
+        // captures user input and parses the string to store values as integers
         private void button1_Click(object sender, EventArgs e)
         {
             string userInput = textBox1.Text;
@@ -27,16 +30,12 @@ namespace Prog_4_test_
             r = nums[0];
             c = nums[1];
 
-            //Debug.Write(r);
-            //Debug.Write(c);
-
-
-
             // Hides start screen
             // this.Hide();
 
-            GameScreen gameScreen = new GameScreen();
+            FindTheIslandGame gameScreen = new FindTheIslandGame();
             gameScreen.Show();
         }
+
     }
 }

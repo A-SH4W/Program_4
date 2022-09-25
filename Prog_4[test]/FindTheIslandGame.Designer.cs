@@ -1,6 +1,6 @@
 ﻿namespace Prog_4_test_
 {
-    partial class GameScreen
+    partial class FindTheIslandGame
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,7 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mapGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.numGuessBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -96,7 +96,7 @@
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.groupBox1.Controls.Add(this.mapGrid);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(229, 19);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox1.MinimumSize = new System.Drawing.Size(165, 146);
@@ -107,18 +107,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // mapGrid
+            // label3
             // 
-            this.mapGrid.ColumnCount = 2;
-            this.mapGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mapGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mapGrid.Location = new System.Drawing.Point(4, 20);
-            this.mapGrid.Name = "mapGrid";
-            this.mapGrid.RowCount = 2;
-            this.mapGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mapGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mapGrid.Size = new System.Drawing.Size(157, 106);
-            this.mapGrid.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "label3";
             // 
             // numGuessBox
             // 
@@ -137,7 +133,7 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "# of Guesses";
             // 
-            // GameScreen
+            // FindTheIslandGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,9 +148,10 @@
             this.Controls.Add(this.guessBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.guessButton);
-            this.Name = "GameScreen";
+            this.Name = "FindTheIslandGame";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,8 +165,8 @@
         private Button button3;
         private Label label2;
         private GroupBox groupBox1;
-        private TableLayoutPanel mapGrid;
         private TextBox numGuessBox;
         private Label label1;
+        private Label label3;
     }
 }
