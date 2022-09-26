@@ -13,7 +13,8 @@ namespace Prog_4_test_
     {
         string[,] Map;
         string islandLoc;
-       
+        int islandRow;
+        int islandCol;
         // Constructor for 2d array, fills with waves
         public NavigationSystem(int row,int col)
         {
@@ -28,15 +29,29 @@ namespace Prog_4_test_
 
         }
 
+        public string getIslandLoc()
+        {
+            return islandLoc;
+        }
+
         // method for generating island location
         public void IslandLoc()
         {
             Random rnd = new Random();
-            int islandRow = rnd.Next(StartScreen.r);
-            int islandCol = rnd.Next(StartScreen.c);
+            islandRow = rnd.Next(StartScreen.r);
+            islandCol = rnd.Next(StartScreen.c);
             islandLoc = string.Join(",", islandRow, islandCol);
             Debug.Write("island loc-> ");
             Debug.Write(islandLoc);
+        }
+
+        public int getIslandRow()
+        {
+            return islandRow;
+        }
+        public int getIslandCol()
+        {
+            return islandCol;
         }
 
         // method that converts 2d array (map) into string to be printed to the map display

@@ -37,14 +37,45 @@ namespace Prog_4_test_
         // Also tracks number of guesses and updates guess display
         private void guessButton_Click(object sender, EventArgs e)
         {
-            string userGuess = guessBox.Text; 
+            string userGuess = guessBox.Text;
+            char where = 'A';
             List<int> guess = userGuess.Split(',').Select(int.Parse).ToList();
             int rowGuess = guess[0];
             int colGuess = guess[1];
             guessBox.Clear();
             guessCounter++;
-            numGuessBox.Text = guessCounter.ToString();           
+            numGuessBox.Text = guessCounter.ToString();
             
+
+            //This lets the game know where the users guess is in relation to the island
+            //the result is stored as a char in the where variable
+            if(userGuess == nav.getIslandLoc())
+            {
+                //YOU WINNNNN
+            }
+            else if(rowGuess == nav.getIslandRow())
+            {
+                where = 'C';
+            }
+            else if(colGuess == nav.getIslandCol())
+            {
+                where = 'R';
+            }
+            else
+            {
+                int isEven = guessCounter % 2;
+                int NSorWE = (isEven == 0) ? 1 : 0;
+                if (NSorWE == 1)
+                {
+                    where = (colGuess < nav.getIslandCol()) ? 'N' : 'S';
+                }
+                else
+                {
+                    where = (rowGuess < nav.getIslandRow()) ? 'W' : 'E';
+                }
+            }
+            Debug.Write("where guess-> ");
+            Debug.Write(where);
         }
     }
 }
