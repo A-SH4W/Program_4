@@ -76,6 +76,7 @@ namespace Prog_4_test_
             {
                 //YOU WIN
                 guessResult = 'I';
+                MessageBox.Show("YOU WIN!!!");
             
             }
             else if (rowGuess == nav.getIslandRow() && validInput == true)
