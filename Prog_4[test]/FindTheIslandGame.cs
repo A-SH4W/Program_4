@@ -52,6 +52,7 @@ namespace Prog_4_test_
             if(userGuess == nav.getIslandLoc())
             {
                 //YOU WINNNNN
+                where = 'I';
             }
             else if(rowGuess == nav.getIslandRow())
             {
