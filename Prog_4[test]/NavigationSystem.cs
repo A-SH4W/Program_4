@@ -30,6 +30,13 @@ namespace Prog_4_test_
 
         }
 
+        public void updateMap(char result, int row, int col)
+        {
+            Map[row, col] = result.ToString();
+
+
+        }
+
 
         public string getIslandLoc()
         {
@@ -57,7 +64,7 @@ namespace Prog_4_test_
         }
 
         // method that converts 2d array (map) into string to be printed to the map display
-        public string PrintMap()
+        public string printMap()
         {     
             var sb = new StringBuilder(string.Empty);
             var maxI = Map.GetLength(0);

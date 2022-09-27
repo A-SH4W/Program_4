@@ -16,7 +16,7 @@ namespace Prog_4_test_
             InitializeComponent();
            
             nav.IslandLoc();
-            label3.Text = nav.PrintMap();
+            label3.Text = nav.printMap();
   
         }
 
@@ -56,11 +56,11 @@ namespace Prog_4_test_
             }
             else if(rowGuess == nav.getIslandRow())
             {
-                guessResult = 'C';
+                guessResult = 'R';
             }
             else if(colGuess == nav.getIslandCol())
             {
-                guessResult = 'R';
+                guessResult = 'C';
             }
             else
             {
@@ -77,6 +77,9 @@ namespace Prog_4_test_
             }
             Debug.Write("guessResult guess-> ");
             Debug.Write(guessResult);
+
+            nav.updateMap(guessResult, rowGuess, colGuess);
+            nav.printMap();
         }
     }
 }
