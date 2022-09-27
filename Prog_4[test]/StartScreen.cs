@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Aodhan Shaw / Alex Ryan
+// CMPS 4143
+// 09/26/2022
+// Program 4: Find Island Game
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

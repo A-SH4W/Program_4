@@ -1,3 +1,8 @@
+// Aodhan Shaw / Alex Ryan
+// CMPS 4143
+// 09/26/2022
+// Program 4: Find Island Game
+
 using System.Diagnostics;
 
 namespace Prog_4_test_
