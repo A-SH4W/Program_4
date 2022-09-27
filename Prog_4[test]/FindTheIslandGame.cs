@@ -16,7 +16,7 @@ namespace Prog_4_test_
             InitializeComponent();
            
             nav.IslandLoc();
-            label3.Text = nav.printMap();
+            label3.Text = nav.printMap(); // display to GUI
   
         }
 
@@ -37,6 +37,7 @@ namespace Prog_4_test_
         // Also tracks number of guesses and updates guess display
         private void guessButton_Click(object sender, EventArgs e)
         {
+            bool validInput = true;
             string userGuess = guessBox.Text;
             char guessResult = 'A';
             List<int> guess = userGuess.Split(',').Select(int.Parse).ToList();
@@ -44,25 +45,43 @@ namespace Prog_4_test_
             int colGuess = guess[1];
             guessBox.Clear();
             guessCounter++;
-            numGuessBox.Text = guessCounter.ToString();
+            numGuessBox.Text = guessCounter.ToString(); // display to GUI
+
+            // if statements validate user guess
+            // Displays message box indicating input is invalid
+            if (rowGuess > StartScreen.r || rowGuess < 0)
+            {
+                validInput = false;
+                rowGuess = 0;
+                MessageBox.Show("ERROR: Input exceeds bounds of map");
+            }
+
+            if (colGuess > StartScreen.c || colGuess < 0)
+            {
+                colGuess = 0;
+                validInput = false;
+                MessageBox.Show("ERROR: Input exceeds bounds of map");
+            }
+
             
 
             //This lets the game know where the users guess is in relation to the island
             //the result is stored as a char in the guessResult variable
-            if(userGuess == nav.getIslandLoc())
+            if (userGuess == nav.getIslandLoc() && validInput == true)
             {
-                //YOU WINNNNN
+                //YOU WIN
                 guessResult = 'I';
+            
             }
-            else if(rowGuess == nav.getIslandRow())
+            else if (rowGuess == nav.getIslandRow() && validInput == true)
             {
                 guessResult = 'R';
             }
-            else if(colGuess == nav.getIslandCol())
+            else if (colGuess == nav.getIslandCol() && validInput == true)
             {
                 guessResult = 'C';
             }
-            else
+            else if (validInput==true)
             {
                 int isEven = guessCounter % 2;
                 int NSorWE = (isEven == 0) ? 1 : 0;
@@ -75,11 +94,9 @@ namespace Prog_4_test_
                     guessResult = (rowGuess < nav.getIslandRow()) ? 'W' : 'E';
                 }
             }
-            Debug.Write("guessResult guess-> ");
-            Debug.Write(guessResult);
-
+            
             nav.updateMap(guessResult, rowGuess, colGuess);
-            nav.printMap();
-        }
+            label3.Text = nav.printMap(); // display to GUI
+        }                
     }
 }

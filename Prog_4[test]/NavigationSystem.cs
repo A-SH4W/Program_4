@@ -30,10 +30,10 @@ namespace Prog_4_test_
 
         }
 
+        // Method for updating map to be re-printed to display
         public void updateMap(char result, int row, int col)
         {
             Map[row, col] = result.ToString();
-
 
         }
 
@@ -43,15 +43,13 @@ namespace Prog_4_test_
             return islandLoc;
         }
 
-        // method for generating island location
+        // Method for generating random island location
         public void IslandLoc()
         {
             Random rnd = new Random();
             islandRow = rnd.Next(StartScreen.r);
             islandCol = rnd.Next(StartScreen.c);
             islandLoc = string.Join(",", islandRow, islandCol);
-            Debug.Write("island loc-> ");
-            Debug.Write(islandLoc);
         }
 
         public int getIslandRow()
@@ -63,7 +61,7 @@ namespace Prog_4_test_
             return islandCol;
         }
 
-        // method that converts 2d array (map) into string to be printed to the map display
+        // Method that converts 2d array (map) into string to be printed to the map display
         public string printMap()
         {     
             var sb = new StringBuilder(string.Empty);
@@ -89,12 +87,6 @@ namespace Prog_4_test_
             return result;          
         }
 
-        public void GuessMethod()
-        {
-            //what do? useless?
-            
-        }
-
-
+       
     }
 }
