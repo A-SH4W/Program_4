@@ -15,6 +15,7 @@ namespace Prog_4_test_
         string islandLoc;
         int islandRow;
         int islandCol;
+
         // Constructor for 2d array, fills with waves
         public NavigationSystem(int row,int col)
         {
@@ -28,6 +29,7 @@ namespace Prog_4_test_
             }
 
         }
+
 
         public string getIslandLoc()
         {

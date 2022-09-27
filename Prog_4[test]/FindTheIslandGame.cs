@@ -38,7 +38,7 @@ namespace Prog_4_test_
         private void guessButton_Click(object sender, EventArgs e)
         {
             string userGuess = guessBox.Text;
-            char where = 'A';
+            char guessResult = 'A';
             List<int> guess = userGuess.Split(',').Select(int.Parse).ToList();
             int rowGuess = guess[0];
             int colGuess = guess[1];
@@ -48,19 +48,19 @@ namespace Prog_4_test_
             
 
             //This lets the game know where the users guess is in relation to the island
-            //the result is stored as a char in the where variable
+            //the result is stored as a char in the guessResult variable
             if(userGuess == nav.getIslandLoc())
             {
                 //YOU WINNNNN
-                where = 'I';
+                guessResult = 'I';
             }
             else if(rowGuess == nav.getIslandRow())
             {
-                where = 'C';
+                guessResult = 'C';
             }
             else if(colGuess == nav.getIslandCol())
             {
-                where = 'R';
+                guessResult = 'R';
             }
             else
             {
@@ -68,15 +68,15 @@ namespace Prog_4_test_
                 int NSorWE = (isEven == 0) ? 1 : 0;
                 if (NSorWE == 1)
                 {
-                    where = (colGuess < nav.getIslandCol()) ? 'N' : 'S';
+                    guessResult = (colGuess < nav.getIslandCol()) ? 'N' : 'S';
                 }
                 else
                 {
-                    where = (rowGuess < nav.getIslandRow()) ? 'W' : 'E';
+                    guessResult = (rowGuess < nav.getIslandRow()) ? 'W' : 'E';
                 }
             }
-            Debug.Write("where guess-> ");
-            Debug.Write(where);
+            Debug.Write("guessResult guess-> ");
+            Debug.Write(guessResult);
         }
     }
 }
